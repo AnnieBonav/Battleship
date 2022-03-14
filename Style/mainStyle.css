@@ -1,0 +1,361 @@
+@font-face {
+    font-family: GameCondensed;
+    src: url("../Assets/Fonts/Gamestation_Condensed.otf")
+}
+
+@font-face {
+    font-family: consolaBold;
+    src: url("../Assets/Fonts/CONSOLAB.TTF")
+}
+
+html{
+    height: 100%;
+}
+
+h1{
+    position: absolute;
+    top: 40px;
+    font-size: 120px;
+    font-family: GameCondensed;
+}
+
+h2{
+    font-size: 44px;
+    font-family: GameCondensed;
+}
+
+h3{
+    background-color: #98D0D4;
+    font-family: GameCondensed;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+#information{
+    position: absolute;
+    top: 180px;
+}
+
+.attack-result-text{
+    font-size: 34px;
+    font-family: GameCondensed;
+    background-color: #98D0D4;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+body{
+    background-color: #98D0D4;
+    height: 100%;
+    margin: 0;
+}
+
+canvas{
+    background-image: url("../Assets/Images/Backgrounds/MainBackground.png");
+    border-radius: 10px 0px 0px 10px;
+    width: 900px;
+    height: 890px;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+
+/*NEW STYLES*/
+.wrapper {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.vertical-wrapper{
+    margin-left: -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 900px;
+    min-height: 890px;
+    border-radius: 0px 10px 10px 0px;
+    background-image: url("../Assets/Images/HTML_Background.png");
+    background-size: contain;
+}
+
+#DOm{
+    min-width: 560px;
+}
+
+.center-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inline-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+#player-name{
+    position:absolute;
+    top: 100px;
+}
+
+#ingame{
+    border-radius: 10px 0px 0px 10px;
+}
+
+#end-turn{
+    position: absolute;
+    top: 460px;
+    display: none;
+}
+
+#enemy-ships-information{
+    background-color: #FF008D;
+}
+
+.letter-buttons-style{
+    background-color: black;
+    border:none;
+    font-family: GameCondensed;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 20px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    color:white;
+    min-width: 40px;
+}
+
+.letter-buttons-style:hover {
+    background-color: #008E99;
+}
+
+.letter-buttons-style:active {
+    transform: translateY(3px);
+}
+
+#attack-panel{
+    margin-top: 2px;
+    font-family: GameCondensed;
+    background-color: #98D0D4;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 6px;
+    min-width: 140px;
+}
+
+.action-buttons{
+    border-radius: 6px;
+    font-size: 40px;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+
+
+#attack-input{
+    position: absolute;
+    top: 400px;
+}
+
+
+#attack-result{
+    position: absolute;
+    top: 520px;
+    max-width: 400px;
+    /* top: 700px; */
+}
+
+/*FROM*/
+
+.game-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen{
+    margin: 0;
+    min-width: 1460px;
+    min-height: 890px;
+    background-image: url("../Assets/Images/Backgrounds/MainMenu.png");
+    background-size: contain;
+    display: none;
+}
+
+.horizontal{
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical{
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+button.main-menu-button{
+    border: 0;
+    width: 320px;
+    height: 100px;
+    background-size:cover;
+    margin-left: 600px;
+    margin-bottom: 60px;
+
+}
+
+.main-menu-button:hover{
+    transform: translate(0,4px);
+}
+
+
+button.bottom-button{
+    margin-left: 0px;
+}
+
+.start-game{
+    background-image: url("../Assets/Images/Buttons/StartGame_Button.png");
+    
+}
+
+.instructions{
+    background-image: url("../Assets/Images/Buttons/Instructions_Button.png");
+}
+
+.settings{
+    background-image: url("../Assets/Images/Buttons/Settings_Button.png");
+}
+
+.restart{
+    background-image: url("../Assets/Images/Buttons/Restart_Button.png");
+}
+
+.main-menu{
+    background-image: url("../Assets/Images/Buttons/MainMenu_Button.png");
+}
+
+.start-turn{
+    background-image: url("../Assets/Images/Buttons/StartTurn_Button.png");
+}
+
+#ingame-screen{
+    display:none;
+}
+
+#instructions-screen{
+    display: none;
+    background-image: url("../Assets/Images/Backgrounds/Instructions.png");
+}
+
+#settings-screen{
+    display: none;
+    background-image: url("../Assets/Images/Backgrounds/Settings.png");
+}
+
+#game-over-screen{
+    display: none;
+    background-image: url("../Assets/Images/Backgrounds/GameOver.png");
+}
+
+#start-turn-screen{
+    display: none;
+    background-image: url("../Assets/Images/Backgrounds/StartTurn.png");
+}
+
+#player-number{
+    position: aboslute;
+    top: 0px;
+}
+
+#start-turn-button{
+    margin: 0;
+    padding: 0;
+}
+
+#restart-game{
+    position: absolute;
+    top: 720px;
+    display: none;
+}
+
+
+.winning-type-text{
+    font-size: 30px;
+    background-color: #98D0D4;
+    font-family: GameCondensed;
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 220px;
+    text-align: center;
+}
+
+#winning-percentage-input{
+    border: 0;
+    font-size: 30px;
+    background-color: #79aaad;
+    font-family: GameCondensed;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 50px;
+}
+
+
+
+#settings-players-names-title{
+    position: absolute;
+    top: 220px;
+}
+#settings-players-names{
+    width: 40%;
+    display: flex;
+    position: absolute;
+    top: 310px;
+    justify-content: space-evenly;
+}
+
+#settings-input-title{
+    position: absolute;
+    top: 380px;
+}
+
+#settings-inputs{
+    width: 60%;
+    display: flex;
+    position: absolute;
+    top: 450px;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+}
+
+#last-man-standing, #destroyed-percentage, #suden-death{
+    display: none;
+}
+
+.players-name-input{
+    border: 0;
+    font-size: 30px;
+    background-color: #79aaad;
+    font-family: GameCondensed;
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 200px;
+}
+
+#info-button{
+    padding: 0;
+    margin-top: 40px;
+    max-height: 44px;
+}
+
+.equal-width{
+    min-width: 240px;
+}

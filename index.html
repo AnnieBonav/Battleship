@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Bonavides Aguilar</title>
+    <link rel="stylesheet" href="Style/mainStyle.css">
+</head>
+<body>
+    <div id = "ingame-screen" class = "wrapper">
+        <!-- <h1>Battleship</h1> -->
+        <div id = "ingame" class = "vertical-wrapper">
+            <canvas id = "game-canvas" width = 900 height = 890></canvas>
+        </div>
+
+        <!-- <h1>Ana Bonavides Aguilar</h1> -->
+        <div id = "DOm" class = "vertical-wrapper">
+            <div class = "inline-wrapper" id = "player-name">
+                <h2 id = "ingame-player-info">Annie</h2>
+                <button id = "info-button" class = "letter-buttons-style action-buttons">º</button>
+            </div>
+
+            <!-- This would show the current information on the boats, really just for fun. But something is not working with the enemie's boat -->
+
+            <div class = "inline-wrapper" id = "information">
+                <h3 id = "attacker-ships-information"></h3>
+                <!-- <div id = "enemy-ships-information"></div> -->
+            </div>
+
+            <div id = "attack-input" class = "center-wrapper">
+                <div id = "letter-buttons"></div>
+                <div id = "number-buttons"></div>
+                <div class = "inline-wrapper">
+                    <div id = "attack-panel">A1</div>
+                    <button class = "letter-buttons-style action-buttons" id = "attack-button" >GO!</button>
+                </div>
+            </div>
+
+            <div id = "attack-result"></div>
+
+            <div id = "end-turn" class = "center-wrapper">
+                <button class = "letter-buttons-style action-buttons" id = "end-turn-button">End Turn</button>
+            </div>
+
+            <div id = "restart-game" class = "center-wrapper">
+                <button class = "letter-buttons-style action-buttons equal-width" id = "restart-game-button">Restart Game</button>
+                <button class = "letter-buttons-style action-buttons equal-width" id = "mainMenu-gameOver">Main Menu</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- This is  normally hidden-->
+    <!-- <div>
+        <div id="player-number">
+            <input type="checkbox" id = "is-debugging">
+            <input type="radio" name="player" id="player-1" checked="true">Player 1</input>
+            <input type="radio" name="player" id="player-2">Player 2</input>
+        </div> 
+    </div> -->
+
+    <div class = "game-wrapper" id = "other-screens">
+        
+        <div class = "screen horizontal"  id = "main-menu-screen">
+            <button class = "main-menu-button start-game" id = "startGame-mainMenu"> </button>
+            <button class = "main-menu-button instructions" id = "instructions-mainMenu"></button>
+            <button class = "main-menu-button settings" id = "settings-mainMenu"></button>
+        </div>
+
+        <div class = "screen horizontal"  id = "start-turn-screen">
+            <h1 id = "turn-player-info">PlayerName</h1>
+            <button class = "main-menu-button start-turn" id = "start-turn-button"> </button>
+        </div>
+
+        <div class = "screen vertical" id = "instructions-screen">
+            <button class = "main-menu-button main-menu bottom-button" id = "mainMenu-instructions"></button>
+            <button class = "main-menu-button start-game bottom-button" id = "startGame-instructions"></button>
+        </div>
+
+        <div class = "screen vertical" id = "settings-screen">
+            <h2 id = "settings-players-names-title">Player's names</h2>
+            <div id = "settings-players-names">
+                <input type="text" id="player-0-name" value="John Doe" class = "players-name-input"></input>
+                <input type="text" id="player-1-name" value="Jane Doe" class = "players-name-input"></input>
+            </div>
+
+            <h2 id = "settings-input-title">Winning Type</h2>
+            <div id = "settings-inputs">
+                <div>
+                    <input type="radio" name="winningType" id="last-man-standing" checked="true"><p class="winning-type-text" id="selectLastManStanding">Last Man Standing</p></input>
+                </div>
+                <!-- <div>
+                    <input type="radio" name="winningType" id="destroyed-percentage" checked="false"><p class="winning-type-text" id="selectDestroyedPercentage">Destroyed Percentage</p></input>
+                    <input type="text" id="winning-percentage-input" value="10" class = "settings-input">%
+                </div> -->
+                <div>
+                    <input type="radio" name="winningType" id="suden-death" checked="false"><p class="winning-type-text" id="selectSudenDeath">Sudden Death</p></input>
+                </div>
+                
+            </div>
+            
+            <button class = "main-menu-button main-menu bottom-button" id = "mainMenu-settings"></button>
+            <button class = "main-menu-button start-game bottom-button" id = "startGame-settings"></button>
+        </div>
+    
+    </div>
+    
+    
+
+    <!-- <script src = "script1.js"></script> -->
+    <script  src = "Scripts/other_dom.js"></script> <!--Having something with type makes error-->
+    <script type="module" src = "Scripts/dom.js"></script>
+    <script type="module" src = "Scripts/domFunctions.js"></script>
+    <script type="module" src = "Scripts/battleship.js"></script>
+
+</body>
+</html>
